@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap");
+
+.main {
+  padding-top: 200px;
+  background-color: skyblue;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+}
+
+.title {
+  font-size: 44px;
+  font-weight: 700;
+  color: darkslateblue;
+  font-family: "Happy Monkey", system-ui;
+  text-align: center;
+  position: fixed;
+  top: 30px;
+}
+
+.piano {
+  width: 20px;
+  height: 100%;
+}
+
+.piano div {
+  width: 20px;
+  height: 40px;
+}
+
+.piano div:nth-child(2n) {
+  background-color: red;
+}
+
+.piano div:nth-child(2n - 1) {
+  background-color: white;
+}
+
+.road {
+  background-color: gray;
+  width: calc(100% - 40px);
+  position: relative;
+}
+
+.groupKarting {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation-name: goIn;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes goIn {
+  0% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.goal {
+  position: absolute;
+  bottom: 0;
+  height: 20px;
+  width: 100%;
+  background-color: red;
+  overflow: hidden;
+  display: flex;
+}
+
+.goal div {
+  width: 20px;
+  height: 20px;
+}
+
+.goal div:nth-child(2n) {
+  background-color: white;
+}
+
+.goal div:nth-child(2n - 1) {
+  background-color: black;
+}
+
+.kartGroup {
+  display: flex;
+  margin: 50px 0;
+}
+
+.mainKart {
+  scale: 1.5;
+}
